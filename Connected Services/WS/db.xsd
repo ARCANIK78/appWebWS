@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:mstns="http://tempuri.org/db.xsd" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns="http://tempuri.org/db.xsd" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://tempuri.org/db.xsd" id="db" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element msdata:IsDataSet="true" msdata:UseCurrentLocale="true" name="db">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TAfiliaciones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="AfiliacionID" type="xs:int" />
+              <xs:element name="CI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha" type="xs:dateTime" />
+              <xs:element name="SegurosID" type="xs:int" />
+              <xs:element name="Estado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TPersonas">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nombres">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="paterno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="materno">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha_nac" type="xs:dateTime" />
+              <xs:element name="sexo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="estado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TLugares">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="LugarID" type="xs:int" />
+              <xs:element name="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TSeguros">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="SegurosID" type="xs:int" />
+              <xs:element name="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element minOccurs="0" name="TipoID" type="xs:int" />
+              <xs:element minOccurs="0" name="LugarID" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TTipos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" name="TipoID" type="xs:int" />
+              <xs:element minOccurs="0" name="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HistorialAfilaciones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CI">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element msdata:ReadOnly="true" minOccurs="0" name="Asegurado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="152" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="estado">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha_nac" type="xs:dateTime" />
+              <xs:element name="sexo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha" type="xs:dateTime" />
+              <xs:element name="EstadoT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Seguros">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique msdata:PrimaryKey="true" name="Constraint1">
+      <xs:selector xpath=".//mstns:TAfiliaciones" />
+      <xs:field xpath="mstns:AfiliacionID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="TPersonas_Constraint1">
+      <xs:selector xpath=".//mstns:TPersonas" />
+      <xs:field xpath="mstns:CI" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="TLugares_Constraint1">
+      <xs:selector xpath=".//mstns:TLugares" />
+      <xs:field xpath="mstns:LugarID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="TSeguros_Constraint1">
+      <xs:selector xpath=".//mstns:TSeguros" />
+      <xs:field xpath="mstns:SegurosID" />
+    </xs:unique>
+    <xs:unique msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true" name="TTipos_Constraint1">
+      <xs:selector xpath=".//mstns:TTipos" />
+      <xs:field xpath="mstns:TipoID" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_TAfiliaciones_TPersonas" msdata:parent="TPersonas" msdata:child="TAfiliaciones" msdata:parentkey="CI" msdata:childkey="CI" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK_TAfiliaciones_TSeguros" msdata:parent="TSeguros" msdata:child="TAfiliaciones" msdata:parentkey="SegurosID" msdata:childkey="SegurosID" />
+      <msdata:Relationship name="FK_TSeguros_TLugares" msdata:parent="TLugares" msdata:child="TSeguros" msdata:parentkey="LugarID" msdata:childkey="LugarID" />
+      <msdata:Relationship name="FK_TSeguros_TTipos" msdata:parent="TTipos" msdata:child="TSeguros" msdata:parentkey="TipoID" msdata:childkey="TipoID" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_TAfiliaciones_TPersonas" msdata:parent="TPersonas" msdata:child="TAfiliaciones" msdata:parentkey="CI" msdata:childkey="CI" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK_TAfiliaciones_TSeguros" msdata:parent="TSeguros" msdata:child="TAfiliaciones" msdata:parentkey="SegurosID" msdata:childkey="SegurosID" />
+      <msdata:Relationship name="FK_TSeguros_TLugares" msdata:parent="TLugares" msdata:child="TSeguros" msdata:parentkey="LugarID" msdata:childkey="LugarID" />
+      <msdata:Relationship name="FK_TSeguros_TTipos" msdata:parent="TTipos" msdata:child="TSeguros" msdata:parentkey="TipoID" msdata:childkey="TipoID" />
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_TAfiliaciones_TPersonas" msdata:parent="TPersonas" msdata:child="TAfiliaciones" msdata:parentkey="CI" msdata:childkey="CI" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" />
+      <msdata:Relationship name="FK_TAfiliaciones_TSeguros" msdata:parent="TSeguros" msdata:child="TAfiliaciones" msdata:parentkey="SegurosID" msdata:childkey="SegurosID" />
+      <msdata:Relationship name="FK_TSeguros_TLugares" msdata:parent="TLugares" msdata:child="TSeguros" msdata:parentkey="LugarID" msdata:childkey="LugarID" />
+      <msdata:Relationship name="FK_TSeguros_TTipos" msdata:parent="TTipos" msdata:child="TSeguros" msdata:parentkey="TipoID" msdata:childkey="TipoID" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://tempuri.org/db.xsd" />
+      <s:import schemaLocation="https://localhost:44381/WebService1.asmx?schema=db" namespace="http://tempuri.org/db.xsd" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObtenerLugares">
+        <s:complexType />
+      </s:element>
+      <s:element name="ObtenerLugaresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ObtenerLugaresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/db.xsd" name="namespace" />
+                <s:attribute fixed="TLugaresDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarNuevoAfiliado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nombre" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="paterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="materno" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FechaNacimiento" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="sexo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="segurosID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarNuevoAfiliadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarNuevoAfiliadoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarBajas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarBajasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarBajasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DarAltas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CI" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="seguroId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DarAltasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DarAltasResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarHistorial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarHistorialResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarHistorialResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/db.xsd" name="namespace" />
+                <s:attribute fixed="HistorialAfilacionesDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MostrarSeguros">
+        <s:complexType />
+      </s:element>
+      <s:element name="MostrarSegurosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MostrarSegurosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+                <s:attribute fixed="http://tempuri.org/db.xsd" name="namespace" />
+                <s:attribute fixed="TSegurosDataTable" name="tableTypeName" />
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerLugaresSoapIn">
+    <wsdl:part name="parameters" element="tns:ObtenerLugares" />
+  </wsdl:message>
+  <wsdl:message name="ObtenerLugaresSoapOut">
+    <wsdl:part name="parameters" element="tns:ObtenerLugaresResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarNuevoAfiliadoSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarNuevoAfiliado" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarNuevoAfiliadoSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarNuevoAfiliadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarBajasSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarBajas" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarBajasSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarBajasResponse" />
+  </wsdl:message>
+  <wsdl:message name="DarAltasSoapIn">
+    <wsdl:part name="parameters" element="tns:DarAltas" />
+  </wsdl:message>
+  <wsdl:message name="DarAltasSoapOut">
+    <wsdl:part name="parameters" element="tns:DarAltasResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarHistorialSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarHistorial" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarHistorialSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarHistorialResponse" />
+  </wsdl:message>
+  <wsdl:message name="MostrarSegurosSoapIn">
+    <wsdl:part name="parameters" element="tns:MostrarSeguros" />
+  </wsdl:message>
+  <wsdl:message name="MostrarSegurosSoapOut">
+    <wsdl:part name="parameters" element="tns:MostrarSegurosResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLugares">
+      <wsdl:input message="tns:ObtenerLugaresSoapIn" />
+      <wsdl:output message="tns:ObtenerLugaresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarNuevoAfiliado">
+      <wsdl:input message="tns:RegistrarNuevoAfiliadoSoapIn" />
+      <wsdl:output message="tns:RegistrarNuevoAfiliadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarBajas">
+      <wsdl:input message="tns:RegistrarBajasSoapIn" />
+      <wsdl:output message="tns:RegistrarBajasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DarAltas">
+      <wsdl:input message="tns:DarAltasSoapIn" />
+      <wsdl:output message="tns:DarAltasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHistorial">
+      <wsdl:input message="tns:ConsultarHistorialSoapIn" />
+      <wsdl:output message="tns:ConsultarHistorialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MostrarSeguros">
+      <wsdl:input message="tns:MostrarSegurosSoapIn" />
+      <wsdl:output message="tns:MostrarSegurosSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLugares">
+      <soap:operation soapAction="http://tempuri.org/ObtenerLugares" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarNuevoAfiliado">
+      <soap:operation soapAction="http://tempuri.org/RegistrarNuevoAfiliado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarBajas">
+      <soap:operation soapAction="http://tempuri.org/RegistrarBajas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DarAltas">
+      <soap:operation soapAction="http://tempuri.org/DarAltas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHistorial">
+      <soap:operation soapAction="http://tempuri.org/ConsultarHistorial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarSeguros">
+      <soap:operation soapAction="http://tempuri.org/MostrarSeguros" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerLugares">
+      <soap12:operation soapAction="http://tempuri.org/ObtenerLugares" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarNuevoAfiliado">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarNuevoAfiliado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarBajas">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarBajas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DarAltas">
+      <soap12:operation soapAction="http://tempuri.org/DarAltas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarHistorial">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarHistorial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MostrarSeguros">
+      <soap12:operation soapAction="http://tempuri.org/MostrarSeguros" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="https://localhost:44381/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="https://localhost:44381/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
