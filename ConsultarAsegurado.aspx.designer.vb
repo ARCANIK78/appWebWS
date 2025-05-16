@@ -47,7 +47,7 @@ Partial Public Class ConsultarAsegurado
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnConsultar As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents btnConsultar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control Label2.

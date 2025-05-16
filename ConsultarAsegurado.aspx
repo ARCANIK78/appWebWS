@@ -13,7 +13,7 @@
         <div>
             <asp:Label ID="Label1" runat="server" Text="Ingresar CI del asegurado"></asp:Label>
             <asp:TextBox ID="txtCI" runat="server"></asp:TextBox>
-            <asp:TextBox ID="btnConsultar" runat="server" Text="Consultar" />
+            <asp:Button ID="btnConsultar" runat="server" Text="Consultar" />
         </div>
         <div>
             <asp:Label ID="Label2" runat="server" Text="Nombre Completo"></asp:Label>
