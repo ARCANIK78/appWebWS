@@ -118,7 +118,7 @@
     </Compile>
     <Compile Include="ConsultarAsegurado.aspx.vb">
       <DependentUpon>ConsultarAsegurado.aspx</DependentUpon>
-      <SubType>ASPXCodebehind</SubType>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
