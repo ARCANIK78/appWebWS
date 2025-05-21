@@ -41,13 +41,13 @@ Partial Public Class ConsultarAsegurado
     Protected WithEvents txtCI As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control btnConsultar.
+    '''Control BtnConsultar.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents btnConsultar As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents BtnConsultar As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
     '''Control Label2.
@@ -84,4 +84,40 @@ Partial Public Class ConsultarAsegurado
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents txtEstado As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''Control dg.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents dg As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
+    '''Control ObjectDataSource1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents ObjectDataSource1 As Global.System.Web.UI.WebControls.ObjectDataSource
+
+    '''<summary>
+    '''Control btnOpcion.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents btnOpcion As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''Control lblmensjae.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents lblmensjae As Global.System.Web.UI.WebControls.Label
 End Class
