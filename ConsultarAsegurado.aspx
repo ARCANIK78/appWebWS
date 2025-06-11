@@ -36,14 +36,14 @@
             </div>
 
             <div class="mb-4">
-                <asp:GridView ID="dg" runat="server" AutoGenerateColumns="False" DataSourceID="ObjectDataSource1" CssClass="table table-bordered table-striped">
+                <asp:GridView ID="dg" runat="server" EnableViewState="True" AutoGenerateColumns="False" DataSourceID="ObjectDataSource1" CssClass="table table-bordered table-striped">
                     <Columns>
                         <asp:BoundField DataField="fecha" HeaderText="FECHA ALTA/BAJA" SortExpression="fecha" />
                         <asp:BoundField DataField="estadoT" HeaderText="ALTA/BAJA" SortExpression="estadoT" />
                         <asp:BoundField DataField="Seguros" HeaderText="SEGUROS DE SALUD" SortExpression="Seguros" />
                     </Columns>
-                </asp:GridView>
-                <asp:ObjectDataSource ID="ObjectDataSource1" runat="server"
+                </asp:GridView >
+                <asp:ObjectDataSource ID="ObjectDataSource1" EnableViewState="True" runat="server"
                     SelectMethod="ConsultarHistorial"
                     TypeName="appWebWS.WS.WebService1SoapClient">
                     <SelectParameters>

@@ -1,4 +1,5 @@
-﻿Imports appWebWS.WS
+﻿Imports System.Security.Cryptography
+Imports appWebWS.WS
 Public Class ConsultarAsegurado
     Inherits System.Web.UI.Page
     Public opcion As String
@@ -14,18 +15,18 @@ Public Class ConsultarAsegurado
                 txtNombres.Text = ds.Item(0).Asegurado
                 txtEstado.Text = ds.Item(0).estado
                 ObjectDataSource1.DataBind()
-                btnOpcion.Visible = True
+                BtnOpcion.Visible = True
                 If ds.Item(0).estado = "ALTA" Then
-                    btnOpcion.Text = "DAR BAJA"
+                    BtnOpcion.Text = "DAR BAJA"
                     opcion = "BAJA"
                 Else
-                    btnOpcion.Text = "DAR ALTA"
+                    BtnOpcion.Text = "DAR ALTA"
                     opcion = "ALTA"
                 End If
             Else
                 txtEstado.Text = "La persona no se encuentra asegurado en ningun seguro de salud"
-                btnOpcion.Visible = True
-                btnOpcion.Text = "Registrar Nuevo Asegurado"
+                BtnOpcion.Visible = True
+                BtnOpcion.Text = "Registrar Nuevo Asegurado"
                 opcion = "NUEVO"
             End If
             lblmensjae.Visible = False
@@ -44,6 +45,8 @@ Public Class ConsultarAsegurado
             lblmensjae.Visible = True
             If BtnOpcion.Text = "DAR BAJA" Then
                 lblmensjae.Text = ws.RegistrarBajas(txtCI.Text)
+                ObjectDataSource1.DataBind()
+                dg.DataBind()
             Else
                 If BtnOpcion.Text = "DAR ALTA" Then
                     Session("CI") = txtCI.Text
@@ -51,6 +54,7 @@ Public Class ConsultarAsegurado
                     Response.Redirect("alta.aspx")
                 End If
             End If
+            Consultar()
         Catch ex As Exception
             lblmensjae.Text = "Error " & ex.Message
         End Try
