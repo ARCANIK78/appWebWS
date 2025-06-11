@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class ConsultarAsegurado
+Partial Public Class alta
 
     '''<summary>
     '''Control form1.
@@ -41,15 +41,6 @@ Partial Public Class ConsultarAsegurado
     Protected WithEvents txtCI As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''Control BtnConsultar.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents BtnConsultar As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''Control Label2.
     '''</summary>
     '''<remarks>
@@ -59,13 +50,13 @@ Partial Public Class ConsultarAsegurado
     Protected WithEvents Label2 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control txtNombres.
+    '''Control txtNOmbre.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtNombres As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents txtNOmbre As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
     '''Control Label3.
@@ -77,47 +68,20 @@ Partial Public Class ConsultarAsegurado
     Protected WithEvents Label3 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''Control txtEstado.
+    '''Control cbSeguro.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents txtEstado As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents cbSeguro As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
-    '''Control dg.
+    '''Control btnAltas.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents dg As Global.System.Web.UI.WebControls.GridView
-
-    '''<summary>
-    '''Control ObjectDataSource1.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents ObjectDataSource1 As Global.System.Web.UI.WebControls.ObjectDataSource
-
-    '''<summary>
-    '''Control BtnOpcion.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents BtnOpcion As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''Control lblmensjae.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents lblmensjae As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents btnAltas As Global.System.Web.UI.WebControls.Button
 End Class

@@ -13,6 +13,7 @@ Public Class ConsultarAsegurado
             If ds.Rows.Count > 0 Then
                 txtNombres.Text = ds.Item(0).Asegurado
                 txtEstado.Text = ds.Item(0).estado
+                ObjectDataSource1.DataBind()
                 btnOpcion.Visible = True
                 If ds.Item(0).estado = "ALTA" Then
                     btnOpcion.Text = "DAR BAJA"
@@ -37,17 +38,24 @@ Public Class ConsultarAsegurado
         Consultar()
     End Sub
 
-    Protected Sub btnOpcion_Click(sender As Object, e As EventArgs) Handles btnOpcion.Click
+    Protected Sub BtnOpcion_Click(sender As Object, e As EventArgs) Handles BtnOpcion.Click
         Try
             Dim ws As New WS.WebService1SoapClient
             lblmensjae.Visible = True
-            If BtnConsultar.Text = "DAR BAJA" Then
+            If BtnOpcion.Text = "DAR BAJA" Then
                 lblmensjae.Text = ws.RegistrarBajas(txtCI.Text)
+            Else
+                If BtnOpcion.Text = "DAR ALTA" Then
+                    Session("CI") = txtCI.Text
+                    Session("NombreCompleto") = txtNombres.Text
+                    Response.Redirect("alta.aspx")
+                End If
             End If
         Catch ex As Exception
-
+            lblmensjae.Text = "Error " & ex.Message
         End Try
     End Sub
 
 
 End Class
+
