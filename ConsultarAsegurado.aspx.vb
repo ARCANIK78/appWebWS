@@ -47,18 +47,24 @@ Public Class ConsultarAsegurado
                 lblmensjae.Text = ws.RegistrarBajas(txtCI.Text)
                 ObjectDataSource1.DataBind()
                 dg.DataBind()
-            Else
-                If BtnOpcion.Text = "DAR ALTA" Then
-                    Session("CI") = txtCI.Text
-                    Session("NombreCompleto") = txtNombres.Text
-                    Response.Redirect("alta.aspx")
-                End If
+            ElseIf BtnOpcion.Text = "DAR ALTA" Then
+                Session("CI") = txtCI.Text
+                Session("NombreCompleto") = txtNombres.Text
+                Response.Redirect("alta.aspx", False)
+                Context.ApplicationInstance.CompleteRequest()
+                Return
+            ElseIf BtnOpcion.Text = "Registrar Nuevo Asegurado" Then
+                Session("CI") = txtCI.Text
+                Response.Redirect("regNuevoAsegurado.aspx", False)
+                Context.ApplicationInstance.CompleteRequest()
+                Return
             End If
             Consultar()
         Catch ex As Exception
             lblmensjae.Text = "Error " & ex.Message
         End Try
     End Sub
+
 
 
 End Class
